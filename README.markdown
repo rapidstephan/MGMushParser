@@ -15,13 +15,13 @@ Create an `NSAttributedString` from an `NSString` with lightweight **Mush** mark
 ### CocoaPods Setup
 
 ```
-pod 'MGMushParser'
+pod 'MGMushParser', git: 'https://github.com/rapidstephan/MGMushParser.git', branch: 'different_regex_pattern'
 ```
 
 ### Example
 
 ```objc
-NSString *mush = @"this string has **bold**, //italics//, and {#ff0000|red text}";
+NSString *mush = @"this string has **bold**, *italics*, and {#ff0000|red text}";
 
 NSAttributedString *result = [MGMushParser attributedStringFromMush:mush
         font:[UIFont fontWithName:@"Helvetica" size:14] color:UIColor.blackColor];
